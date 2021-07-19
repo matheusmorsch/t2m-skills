@@ -8,7 +8,7 @@ public class SkillsVO {
 	@NotNull
 	@Size(min=5, max=30)
 	private String skillsNome;
-	private CategoriaVO categoria;
+	//private CategoriaVO categoria;
 	
 	public Long getSkillsId() {
 		return skillsId;
@@ -22,6 +22,7 @@ public class SkillsVO {
 	public void setSkillsNome(String skillsNome) {
 		this.skillsNome = skillsNome;
 	}
+	/*
 	public CategoriaVO getCategoria() {
 		return categoria;
 	}
@@ -29,6 +30,6 @@ public class SkillsVO {
 		this.categoria = categoria;
 	}
 	
-	
+	*/
 
 }

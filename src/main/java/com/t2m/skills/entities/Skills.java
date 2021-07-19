@@ -1,15 +1,16 @@
 package com.t2m.skills.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name="skills")
@@ -22,9 +23,17 @@ public class Skills {
 	@Column(name = "nome")
     private String skillsNome;
 	
-	@ManyToOne
-	@JoinColumn (name="id_categoria", referencedColumnName="id")
-	private Categorias skillCategoria;
+	//@ManyToOne
+	//@JoinColumn (name="id_categoria", referencedColumnName="id")
+	//private Categorias skillCategoria;
+	
+	@ManyToMany
+	@JoinTable(
+	  name = "pro_skill",
+	  joinColumns = @JoinColumn(name = "id", referencedColumnName = "id_skill"),
+	  inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "film_id")
+	)
+	private List<Profissionais> listFilm;
 
 	public Long getSkillsId() {
 		return skillsId;
@@ -41,7 +50,7 @@ public class Skills {
 	public void setSkillsNome(String skillsNome) {
 		this.skillsNome = skillsNome;
 	}
-
+/*
 	public Categorias getCategoria() {
 		return categoria;
 	}
@@ -50,6 +59,6 @@ public class Skills {
 		this.categoria = categoria;
 	}
 
-	
+	*/
 	
 }

@@ -28,6 +28,7 @@ public class SkillsService {
 		
 		skillVO.setSkillsId(skill.getSkillsId());
 		skillVO.setSkillsNome(skill.getSkillsNome());
+		
 		return skillVO;
 	}
 
