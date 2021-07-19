@@ -46,7 +46,7 @@ public class UsuariosService {
 
 			}
 		} catch (Exception e) {
-			throw new Exception("Não foi possível recuperar a lista de Empresas ::" + e.getMessage());
+			throw new Exception("Não foi possível recuperar a lista de Usuarios ::" + e.getMessage());
 		}
 
 		return listaUsuarios2;
