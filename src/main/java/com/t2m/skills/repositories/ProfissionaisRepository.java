@@ -3,9 +3,10 @@ package com.t2m.skills.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.t2m.skills.entities.Usuarios;
+import com.t2m.skills.entities.Profissionais;
 
 @Repository
-public interface UsuariosRepository extends JpaRepository<Usuarios, Long> {
+public interface ProfissionaisRepository extends JpaRepository<Profissionais, Long>{
+		
 
 }
